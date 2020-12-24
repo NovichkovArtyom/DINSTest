@@ -1,0 +1,3 @@
+SELECT COUNT(accountid_from)
+FROM db_a6185f_dinsse.calls
+WHERE (accountid_from IS NOT null) AND (accountid_to IS NOT null) AND (date BETWEEN '2020-01-15 00:00:00' AND '2020-02-20 23:59:59');

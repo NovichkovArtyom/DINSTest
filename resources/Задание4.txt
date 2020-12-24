@@ -1,0 +1,6 @@
+SELECT COUNT(calls.accountid_to)
+FROM db_a6185f_dinsse.calls 
+INNER JOIN account_phones ON accountid_from = accountid
+INNER JOIN db_a6185f_dinsse.plans ON plans.id = 1002
+WHERE (accountid_from IS NOT NULL) AND (accountid_to IS NOT NULL) AND (duration > 60)
+AND ((phonenumber LIKE "_209%") OR (phonenumber LIKE "_415%"));
